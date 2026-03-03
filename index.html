@@ -4,20 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Hind Siliguri", sans-serif;
+        }
+        .custom-btn{
+            background-color: transparent;
+            border: 1px solid #422AD5;
+            color: #422AD5;
+        }
+        .custom-btn:hover,
+        .custom-tab:hover {
+            background-color: #422AD5 !important;
+            border-color: #422AD5 !important;
+            color: #fff !important;
+        }
+        .custom-tab {
+            background-color: transparent;
+            border: 1px solid #422AD5;
+            color: #422AD5;
+        }
+        .custom-tab::before {
+            display: none !important;
+        }
+        .custom-tab:checked {
+            background-color: #422AD5 !important;
+            border-color: #422AD5 !important;
+            color: #ffffff !important;
+            box-shadow: none !important;
+            border-bottom: 1px solid #422AD5 !important;
+        }
+    </style>
     <title>English Janala</title>
 </head>
 
 <body>
 
+    <header>
+        <div class="bg-[#faeaea] shadow-sm">
+            <div class="container mx-auto navbar py-7">
+                <div class="flex-1">
+                    <a class="btn btn-ghost text-xl">English <img src="assets/logo.png" alt="logo"> জানালা</a>
+                </div>
+                <div class="flex-none gap-2">
+                    <a href="#faq" class="btn custom-btn ">
+                        <i class="fa-regular fa-circle-question"></i> FAQ
+                    </a>
+                    <button class="btn custom-btn">
+                        <i class="fa-solid fa-book-open"></i> Learn
+                    </button>
+                    <button class="btn custom-btn ">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
 
+        <!-- ===== HERO ===== -->
+        <section>
+            <div class="container mx-auto">
+                <div class="hero min-h-screen">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <img src="assets/hero-student.png" class="max-w-sm rounded-lg" alt="student" />
+                        <div>
+                            <h1 class="text-5xl font-bold">
+                                <span class="text-[#00BCFF]">English</span> is Easy
+                            </h1>
+                            <p class="py-6">
+                                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
+                                চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                            </p>
+                            <div class="flex flex-col gap-3 w-xs">
+                                <input type="email" class="input" placeholder="Enter Your Name" />
+                                <input type="password" class="input" placeholder=".................." />
+                                <button class="btn btn-primary w-[140px]">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
 
+    <main>
 
+        <!-- ===== VOCABULARY TABS ===== -->
+        <section>
+            <div class="container mx-auto">
+                <h1 class="text-center mb-20 text-4xl font-bold">
+                    <span class="text-[#00BCFF]">Let's </span> Learn Vocabularies
+                </h1>
 
+                <div class="tabs tabs-border gap-3 justify-center flex-wrap">
 
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 1" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
 
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 2" checked="checked" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 2</div>
 
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 3" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 3</div>
+
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 4" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 4</div>
+
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 5" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 5</div>
+
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 6" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 6</div>
+
+                    <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 7" />
+                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 7</div>
+
+                </div>
+
+                <div class="text-center mt-10">
+                    <p class="font-thin mb-3">আপনি এখনো কোন Lesson Select করেন নি</p>
+                    <h2 class="text-4xl">একটি Lesson Select করুন।</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section id="faq" class="mt-44">
+            <div class="container mx-auto">
+                <h1 class="text-center mb-20 text-4xl font-bold">
+                    <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+                </h1>
+                <div class="faq__container grid gap-3">
+
+                    <div class="collapse collapse-arrow bg-[#F8F8F8] border border-base-300">
+                        <input type="radio" name="my-accordion-2" checked="checked" />
+                        <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+                        <div class="collapse-content text-sm">You can start by exploring our beginner lessons,
+                            interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
+                    </div>
+
+                    <div class="collapse collapse-arrow bg-[#F8F8F8] border border-base-300">
+                        <input type="radio" name="my-accordion-2" />
+                        <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+                        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow
+                            the instructions sent to your email.</div>
+                    </div>
+
+                    <div class="collapse collapse-arrow bg-[#F8F8F8] border border-base-300">
+                        <input type="radio" name="my-accordion-2" />
+                        <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                    </div>
+
+                    <div class="collapse collapse-arrow bg-[#F8F8F8] border border-base-300">
+                        <input type="radio" name="my-accordion-2" />
+                        <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                    </div>
+
+                    <div class="collapse collapse-arrow bg-[#F8F8F8] border border-base-300">
+                        <input type="radio" name="my-accordion-2" />
+                        <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container mx-auto">
+            <div class="footer sm:footer-horizontal p-10 my-24 justify-between items-center">
+                <aside class="flex flex-col items-start">
+                    <div class="flex items-center gap-1 text-xl font-bold">
+                        English <img src="assets/logo.png" alt="logo"> জানালা
+                    </div>
+                    <p class="text-left mt-1">
+                        ইংরেজি শিখুন সহজে<br />
+                        Providing ED-Tech Applications since 2025
+                    </p>
+                </aside>
+                <nav>
+                    <h6 class="footer-title">FOLLOW US</h6>
+                    <div class="grid grid-flow-col gap-4 items-center">
+                        <a class="cursor-pointer"><img src="assets/fb-thumb.png" alt="facebook"></a>
+                        <a class="cursor-pointer"><img src="assets/youtube-thumb.png" alt="youtube"></a>
+                        <a class="cursor-pointer"><img src="assets/instagram-thumb.png" alt="instagram"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
