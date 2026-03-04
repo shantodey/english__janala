@@ -14,6 +14,7 @@
     <style>
         body {
             font-family: "Hind Siliguri", sans-serif;
+            scroll-behavior: smooth;
         }
         .custom-btn{
             background-color: transparent;
@@ -45,7 +46,7 @@
     <title>English Janala</title>
 </head>
 
-<body>
+<body class="scroll-smooth">
 
     <header>
         <div class="bg-[#faeaea] shadow-sm">
@@ -67,21 +68,21 @@
             </div>
         </div>
 
-        <!-- ===== HERO ===== -->
+
         <section>
             <div class="container mx-auto">
                 <div class="hero min-h-screen">
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <img src="assets/hero-student.png" class="max-w-sm rounded-lg" alt="student" />
-                        <div>
+                        <div class="md:text-center">
                             <h1 class="text-5xl font-bold">
                                 <span class="text-[#00BCFF]">English</span> is Easy
                             </h1>
-                            <p class="py-6">
-                                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
-                                চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                            <p class="py-6 font-medium opacity-90">
+                                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>আপনার দক্ষতা বাড়াতে
+                                চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে <br> অন্য একটি Level এ
                             </p>
-                            <div class="flex flex-col gap-3 w-xs">
+                            <div class="flex flex-col gap-3 w-xs md:items-center">
                                 <input type="email" class="input" placeholder="Enter Your Name" />
                                 <input type="password" class="input" placeholder=".................." />
                                 <button class="btn btn-primary w-[140px]">Get Started</button>
@@ -100,7 +101,11 @@
                     <span class="text-[#00BCFF]">Let's </span> Learn Vocabularies
                 </h1>
 
-                <div class="tabs tabs-border gap-3 justify-center flex-wrap">
+
+                <div id="button__container" class="flex justify-center items-center gap-4 flex-wrap"></div>
+
+
+                <!-- <div class="tabs tabs-border gap-3 justify-center flex-wrap">
 
                     <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 1" />
                     <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
@@ -121,9 +126,15 @@
                     <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 6</div>
 
                     <input type="radio" name="my_tabs_2" class="tab btn custom-tab" aria-label="📖 Lesson - 7" />
-                    <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 7</div>
+                    <div class="tab-content border-base-300 bg-base-100 p-10">
+                        <div class="flex flex-col justify-center items-center gap-3.5">
+                            <img src="assets/alert-error.png" alt="alert">
+                            <p class="font-medium">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+                            <h3 class="font-medium text-4xl">নেক্সট Lesson এ যান</h3>
+                        </div>
+                    </div>
 
-                </div>
+                </div> -->
 
                 <div class="text-center mt-10">
                     <p class="font-thin mb-3">আপনি এখনো কোন Lesson Select করেন নি</p>
@@ -177,7 +188,7 @@
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
+
     <footer>
         <div class="container mx-auto">
             <div class="footer sm:footer-horizontal p-10 my-24 justify-between items-center">
