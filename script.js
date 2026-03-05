@@ -25,7 +25,18 @@ const loadLevelWords = (id) => {
     const url = `https://openapi.programming-hero.com/api/level/${id}`;// Get ⚡ Words by Levels
     fetch(url)
         .then(res => res.json())
-        .then(jeson => cardS(jeson.data))
+        .then(jeson => {
+            // code for active button
+            const activebtn=document.getElementById(`level__${id}`)
+            activebtn.classList.add("active")
+            act()
+            cardS(jeson.data)
+        })
+}
+// ading active class
+const act=()=>{
+    const actBtnRemove=document.querySelectorAll(".custom-tab")
+    actBtnRemove.forEach(btn =>btn.classList.remove("active"));
 }
 
 // creating level button
@@ -35,7 +46,7 @@ const displayleson = (lesons) => {
     for (const element of lesons) {
         const btnDiv = document.createElement('div');
         btnDiv.innerHTML = `
-            <button onclick="loadLevelWords(${element.level_no})" class="btn custom-tab">
+            <button onclick="loadLevelWords(${element.level_no})" id="level__${element.level_no}" class="btn custom-tab">
                 <i class="fa-solid fa-book-open"></i>Lesson - ${element.level_no}
             </button>
         `
@@ -59,7 +70,6 @@ const cardS = (cardss) => {
         return
     }
     for (const ele of cardss) {
-        console.log(ele);
         const cardDiv = document.createElement('div');
         cardDiv.className = 'bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between h-full';
         cardDiv.innerHTML = `

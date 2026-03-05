@@ -35,3 +35,8 @@ body {
     box-shadow: none !important;
     border-bottom: 1px solid #422AD5 !important;
 }
+.active{
+     background-color: #422AD5 !important;
+    border-color: #422AD5 !important;
+    color: #fff !important;
+}
